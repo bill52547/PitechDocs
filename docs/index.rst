@@ -4,3 +4,4 @@
    SRF
    doufo
    dxlcluster
+   tr2lor
