@@ -45,7 +45,11 @@ easy setup by `pip install dvc`
 
 also see [https://dvc.org/](https://dvc.org/) for setup,reference or tutorial.
 
-prepare `raw data`(eg. simu3d0.npy) in gluster and `split.json` config file in
+like `git` we need initialize a `dvc` local repository(usually based on a git repo) by running cmd:
+```shell
+>>> dvc init
+``` 
+prepare `raw data(eg. simu3d0.npy)` in a local directory(eg. `/data`) and `split.json` config file in
 current directory .then run cmd:
 ```shell
 >>>dvc run -d your_raw_data_dir -d split.json -o train.npy -o test.npy -o valid.npy incident data split -c split.json
@@ -72,7 +76,16 @@ this cmd actually includes train,evaluate and metric and by run the cmd you will
 start by apply_metric_results_)`.
 
 ## construct pipeline
-
+first and foremost, we need a remote repository to store/share our data(dvc repository).assume that we take gluster as our repository,
+we need to initialize this store by running :
+```shell
+>>> dvc remote add -d myremote your_gluster_dir
+``` 
+then if we want to share our data or for reproduce purpose:
+```shell
+>>> dvc add raw_data
+>>> dvc push
+``` 
 ### complete the pipeline graph
 once you run the whole cmd above (start from experiment data processing) then the only thing left is
 collecting all `model/` info  by one cmd for pipeline.make sure you have `produce_pipeline.py` and 
@@ -80,12 +93,21 @@ collecting all `model/` info  by one cmd for pipeline.make sure you have `produc
 ```shell
 >>> python produce_pipeline.py
 ``` 
+by the way, after the pipeline construction we need to track all data files(generated files included):
+```shell
+>>> dvc add .
+>>> dvc push
+``` 
+
 finally a file named `auto_pipeline.dvc` will produce.it also means a ML-pipeline has been
-built.if any file in the pipeline modified ,then by run the cmd:
+built.if any file in the pipeline modified ,then by running the cmd:
 ```shell
 >>> dvc repro auto_pipeline.dvc
 ```
-the whole pipeline will rerun until it produce the results we want.
+the whole pipeline will rerun until it produce the results we want. 
+
+if you want to run the pipeline on other machines, all you need to do is `git pull` your codes&dvc files
+and `dvc pull` your data  and run `dvc repro` cmd.
 
 ### visualization of pipeline
 run the cmd:(`-c` show the concrete cmd in the pipeline `--ascii` show a graph-like pipe)
