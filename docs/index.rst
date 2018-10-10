@@ -5,4 +5,4 @@
    doufo
    dxlcluster
    tr2lor
-   /report/16module
+   ./report/16module
