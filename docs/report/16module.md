@@ -1,6 +1,19 @@
 # 16模块图像中遇到的问题集合
-探测器几何：L=33.4mm, I_radius=99mm, num_ring=1, num_block_per_ring=16, block_size=20x33.4x33.4 mm3, block_grid=1x10x10,crystal_size=20x3.34x3.34mm3
-重建图像：image_size=167x167x33.4mm3, image_grid=100x100x10
+探测器几何：
+
+* L=33.4mm
+* I_radius=99mm
+* num_ring=1
+* num_block_per_ring=16
+* block_size=20x33.4x33.4 mm<sup>3</sup>
+* block_grid=1x10x10
+* crystal_size=20x3.34x3.34 mm<sup>3</sup>
+
+重建图像：
+
+* image_size= 167x167x33.4 mm<sup>3</sup>
+* image_grid= 100x100x10
+
 重建图像如下：
 ![avatar](../picture/16module_with_problems.png)
 
