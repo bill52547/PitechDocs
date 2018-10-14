@@ -6,3 +6,4 @@
    dxlcluster
    tr2lor
    ./report/16module
+   gluster
