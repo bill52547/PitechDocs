@@ -61,8 +61,6 @@ a.将每个block上的晶体数量改为15\*15
 原因说明：
 SRF siddon中的边缘处没有出现亮点的情况，因此认为可能是原来的bbs或者lmrec中的程序bug导致，但是具体bug位置需要仔细对比两块程序
 
-* image_size= 180\*180\*20 mm<sup>3</sup>
-* image_grid= 90\*90\*10
 
 # 16模块实际数据重建结果记录
 重建图像：
@@ -108,9 +106,7 @@ SRF siddon中的边缘处没有出现亮点的情况，因此认为可能是原�
 
 ![avatar](../picture/energy_dis.png)
 
-对4模块数据的能量进行修正后，得到的重建结果如下：
-
-![avatar](../picture/d15_energy_modified.png)
+需要对4模块数据的能量做校正
 
 
 ##  18 cm直径flood phantom重建图像
