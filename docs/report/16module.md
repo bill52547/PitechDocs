@@ -231,3 +231,8 @@ SRF siddon中的边缘处没有出现亮点的情况，因此认为可能是原�
 ![avatar](../picture/d18_with_problems(2).png)
 ![avatar](../picture/d18_with_problems(3).png)
 
+## 12 cm直径flood phantom重建图像(121013数据)
+![avatar](../picture/16module_d12_3position.png)
+
+## 对各通道进行能量增益校正
+![avatar](../picture/16module_d12_channel.png)
