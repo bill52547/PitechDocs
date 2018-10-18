@@ -1,5 +1,5 @@
-#experiment
-##configuration 1--------no theta no loss2d
+# experiment
+## configuration 1--------no theta no loss2d
 ### scatter iamge
 scatter image of the original config without theta and loss2d:
 
