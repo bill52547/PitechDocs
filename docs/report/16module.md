@@ -150,8 +150,25 @@ e.16module补上空缺位置
 ![avatar](../picture/b16_smallgap(2).png)
 ![avatar](../picture/b16_smallgap(3).png)
 
+f.16module空缺更大
+* L=33.4mm
+* I_radius=99mm
+* num_ring=1
+* num_block_per_ring=16
+* block_size=20\*26.72\*33.4 mm<sup>3</sup>
+* block_grid=1\*8\*10
+* crystal_size=20\*3.34\*3.34 mm<sup>3</sup>
+* R_phantom=9cm
 
-f.16module环形模块
+* image_size= 200\*200\*33.4 mm<sup>3</sup>
+* image_grid= 100\*100\*10
+
+下图是重建结果:
+![avatar](../picture/b16_largegap.png)
+![avatar](../picture/b16_largegap(2).png)
+![avatar](../picture/b16_largegap(3).png)
+
+g.16module环形模块
 * L=33.4mm
 * I_radius=99mm
 * num_ring=1
