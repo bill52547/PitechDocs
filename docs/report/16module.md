@@ -186,6 +186,51 @@ g.16module环形模块
 ![avatar](../picture/b16_ring(2).png)
 ![avatar](../picture/b16_ring(3).png)
 
+h.16module单环模拟
+* L=33.4mm
+* I_radius=99mm
+* num_ring=1
+* num_block_per_ring=160
+* block_size=20\*33.4\*3.34 mm<sup>3</sup>
+* block_grid=1\*10\*1
+* crystal_size=20\*3.34\*3.34 mm<sup>3</sup>
+* R_phantom=9cm
+
+* image_size= 200\*200\*3.34 mm<sup>3</sup>
+* image_grid= 100\*100\*1
+
+下图是重建结果:
+
+![avatar](../picture/b16_single.png)
+
+
+以上数据是GATE模拟，siddon重建结果。以下测试计算出系统矩阵A,使用A\*X直接生成投影数据,加入泊松噪声,并使用系统矩阵完成重建。
+下图是重建结果:
+
+![avatar](../picture/b16_single_analysis.png)
+
+使用上述计算出系统矩阵，对仿真数据进行重建(去除random事件，约占50%)
+下图是重建结果:
+
+![avatar](../picture/b16_single_analysis_simudata.png)
+
+将两数据sinogram进行对比:
+
+a.二值化
+下图顺序为解析数据，仿真数据，差值
+
+![avatar](../picture/b16_single_binaryzation.png)
+
+b.均值相等
+顺序同上
+
+![avatar](../picture/b16_single_average.png)
+
+相应的histogram
+
+![avatar](../picture/b16_single_average_hist.png)
+
+
 ## 重建图像中边缘局部最亮点问题
 原因说明：
 SRF siddon中的边缘处没有出现亮点的情况，因此认为可能是原来的bbs或者lmrec中的程序bug导致，但是具体bug位置需要仔细对比两块程序
