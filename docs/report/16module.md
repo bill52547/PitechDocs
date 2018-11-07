@@ -216,12 +216,12 @@ h.16module单环模拟
 
 将两数据sinogram进行对比:
 
-a.二值化
+1.二值化
 下图顺序为解析数据，仿真数据，差值
 
 ![avatar](../picture/b16_single_binaryzation.png)
 
-b.均值相等
+2.均值相等
 顺序同上
 
 ![avatar](../picture/b16_single_average.png)
@@ -230,6 +230,13 @@ b.均值相等
 
 ![avatar](../picture/b16_single_average_hist.png)
 
+
+以下使用仿真中实测system matrix进行重建
+下图是重建结果:
+
+![avatar](../picture/b16_single_matrix_simudata.png)
+
+从该结果可以看出，黑圈问题得到解决
 
 ## 重建图像中边缘局部最亮点问题
 原因说明：
@@ -248,6 +255,9 @@ SRF siddon中的边缘处没有出现亮点的情况，因此认为可能是原�
 ![avatar](../picture/d12_with_problems.png)
 ![avatar](../picture/d12_with_problems(2).png)
 ![avatar](../picture/d12_with_problems(3).png)
+
+加上衰减校正的结果
+![avatar](../picture/16module_d12_atten.png)
 
 
 ## 15 cm直径flood phantom重建图像
@@ -296,5 +306,8 @@ SRF siddon中的边缘处没有出现亮点的情况，因此认为可能是原�
 ## 12 cm直径flood phantom重建图像(121013数据)
 ![avatar](../picture/16module_d12_3position.png)
 
-## 对各通道进行能量增益校正
+对各通道进行能量增益校正
 ![avatar](../picture/16module_d12_channel.png)
+
+
+## 下一步工作：测量实际系统的system matrix
